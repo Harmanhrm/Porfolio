@@ -1,14 +1,19 @@
-import React from 'react'
-import "./about.css"
+import React from 'react';
+import "./about.css";
+import { TypeAnimation } from 'react-type-animation';
 
-const frontpage = () => {
+const FrontPage = () => {
   return (
-    <div className="background">
-      
-       <h1>Hello World!</h1>
-       <button>Explore the Cosmos</button>
-      </div>
-  )
+    <div className="background">   
+      <h1>
+        <TypeAnimation
+          sequence={["Hello World!", 1000]}
+          speed={20}
+          cursor={false}
+        />
+      </h1>
+    </div>
+  );
 }
 
-export default frontpage
+export default FrontPage;

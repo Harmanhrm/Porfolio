@@ -9,12 +9,19 @@ import python from './imgs/python.png';
 import sql from './imgs/sql.png';
 import flutter from './imgs/flutter.png';
 import img from './imgs/photo2.jpg';
-
-const scrollToAbout = () => {
-  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-};
-  
+import laptopImg from "./imgs/about.png"; // Make sure the path is correct
+import Projects from "./Projects/Projects"
+import Github from './Github';
+import Footer from './Footer';
 const FrontPage = () => {
+  const scrollToAbout = () => {
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+  };
+  const scrollToProjects = () => {
+    document.getElementById(Projects).scrollIntoView({ behavior: 'smooth' });
+  };
+
+
   useEffect(() => {
     const aboutSection = document.querySelector('.about-section');
     const observer = new IntersectionObserver((entries) => {
@@ -31,9 +38,11 @@ const FrontPage = () => {
   
     // Clean up the observer on component unmount
     return () => observer.disconnect();
-  }, []);
+  }, []); 
+  
+
   return (
-    
+   
     <div className="background">
       <header className="primary-header flex">
         {/* Header content if any */}
@@ -42,7 +51,7 @@ const FrontPage = () => {
       <nav>
       <ul id="primary-navigation" className="primary-navigation flex">
             <li className="active"><a href="personal.html"><span aria-hidden="true">01</span>About</a></li>
-            <li className="experience"><a href="experience.html"><span aria-hidden="true">02</span>Experience</a></li>
+            <li className="experience" onClick={scrollToProjects} ><a href="experience.html"><span aria-hidden="true">02</span>Experience</a></li>
             <li className="contact"><a href="Work.html"><span aria-hidden="true">03</span>Contact</a></li>
             <li><a href="/resume.pdf" className="resume-link"><span>Resume</span></a></li>
       </ul>
@@ -100,25 +109,41 @@ const FrontPage = () => {
         </div>
       </div>
       
-
-      <section id="about" className="about-section">
-        <h2 className="numbered-heading">About</h2> 
-        
-        <div className="about-inner">
-          <div className="about-text">
-            <p>My name is Harmandeep Singh. I am a Student Software Engineer</p>
-            <p>I've worked using different technologies, both backend and frontend. I'm currently working using Spring Boot and JavaScript. My goal is to build highly performant applications that solve real-world problems and provide users with an awesome experience.</p>
-            <p>You can read more about me on my <a href="https://linkedin.com/in/aitdahmane" rel="noopener noreferrer" target="_blank">LinkedIn</a> page, or check my <a href="https://github.com/aitdahmane" rel="noopener noreferrer" target="_blank">GitHub</a> for some cool things.</p>
-            <p>Here are a few technologies I’ve been working with recently:</p>
-            <ul className="skills-list">
+      <section id='about'>
+  <div className="about-section">
+    <div className="content-container">
+      <div className="about-content">
+        <h1 className="about-title">Know <strong className="purple">Who I'M</strong></h1>
+        <div className="custom-quote">
+          <p style={{ textAlign: "justify" }}>
+            Hailing from <span className="purple">Melbourne, VIC</span>, I am Harmandeep Singh, a dedicated student pursuing a Bachelor of Software Engineering at <strong>RMIT</strong>. My passion for technology is driven by the potential to transform innovative visions into tangible solutions that have real-world applications.
+          </p>
+          <p style={{ textAlign: "justify" }}>
+            My journey into the tech world is fueled by a desire to create and innovate, continuously seeking opportunities to apply my skills in practical settings.
+          </p>
+          <p style={{ textAlign: "justify" }}>
+            Beyond the world of code, I engage in activities that foster my creativity and keep me energized:
+          </p>
+          <ul>
+            <li className="about-activity">Mastering melodies on the piano.</li>
+            <li className="about-activity">Keeping fit with regular workouts.</li>
+            <li className="about-activity">Scoring goals on the soccer field.</li>
           </ul>
-        </div>
-        <div className="about-pic">
-          <img src={img} alt="Headshot" className="dynamic-image" />
+          <p style={{ color: "rgb(155, 126, 172)" }}>
+            "I strive to build solutions that make a significant impact."
+          </p>
+          <footer className="custom-quote-footer">Harmandeep Singh</footer>
         </div>
       </div>
-    </section>
-    
+      <div className="about-pic">
+        <img src={img} alt="Harmandeep Singh" className="img-fluid" />
+      </div>
+    </div>
+  </div>
+</section>
+<Projects></Projects>
+<Github />
+<Footer/>
     </div>
     
   );

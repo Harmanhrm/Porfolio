@@ -1,13 +1,13 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 h1 { margin-top: 0; }
 .background {
-    height: 150vh; 
+    z-index: 1;
+    height:900px; 
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    background-image: url('assets/nasa1.jpg');    
+    background-image: url('assets/nasa5.png');    
     background-position: center; 
     background-repeat: no-repeat; 
     background-blend-mode: darken; /* Ensures text stands out */
@@ -17,12 +17,429 @@ h1 { margin-top: 0; }
   
 .background h1 {
     color: azure;
-    padding: 10%;
-   padding-left: 175px;
-    font-size: 100px;
+    padding: 7%;
+   padding-left: 50px;
+    font-size: 60px;
+    text-align: left;
+    position:relative;
+}
+  
+.background h2 {
+    
+    padding: -50%;
+    padding-left: 140px;
+    text-align: left;
+    position:relative;
+}
+.button {
+    color: white;
     text-align: center;
 }
-.background button {
-    color: purple;
-    text-align: center;
+
+.logo {
+    margin: 0rem;
+    width: 50px;  
+    height: auto;  /* Keeps the aspect ratio intact */
+}
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.primary-navigation {
+    
+    list-style: none;
+    padding: 10;
+    margin:10;
+    backdrop-filter: blur(0.5);
+}
+.primary-navigation a {
+    
+    color: grey;
+    text-decoration: none;
+}
+.primary-navigation a>span{
+    font-weight: 700;
+    margin-inline-end: .5em;
+}
+.flex {
+    display: flex;
+    gap: var(--gap,5rem);
+}
+
+.resume-link {
+    border: 1px solid #fff; /* Example border color - change as needed */
+    border-radius: 4px;
+    padding: 18px 50px; /* Existing padding, adjust if necessary */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    vertical-align: left; /* Align vertically with other navigation items */
+  }
+  
+  .resume-link:hover {
+    background-color: #333; /* Darker background on hover */
+    color: #ddd; /* Lighter text color on hover */
+  }
+  .active:hover {
+    background-color: #333; /* Darker background on hover */
+    color: #ddd; /* Lighter text color on hover */
+}
+.experience:hover {
+    background-color: #333; /* Darker background on hover */
+    color: #ddd; /* Lighter text color on hover */
+  }
+  .contact:hover {
+    background-color: #333; /* Darker background on hover */
+    color: #ddd; /* Lighter text color on hover */
+}
+  
+  
+
+
+/* Custom scrollbar for entire page */
+html, body {
+    height: 100%; 
+    overflow-y: auto; 
+    scrollbar-width:thin; 
+    scrollbar-color: black transparent; 
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent; /* Transparent track */
+}
+
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background-color: black; /* Black thumb */
+    border-radius: 6px; /* Rounded corners */
+    border: 2px solid transparent; /* Smaller thumb by cutting from the sides */
+}
+/* IE and Edge */
+html, body {
+    -ms-overflow-style: auto; /* Standard scrollbar in IE/Edge */
+}
+
+
+.skills__item {
+    pointer-events: auto; /* Re-enable pointer events for interactivity */
+}
+
+.skills {
+    pointer-events: none;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    position: relative;
+    transform: translateY(-290px); /* Adjust this value to position it correctly */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+    z-index: -1; /* Lower than other content */
+}
+
+.skills, .about-section {
+    z-index: 2; /* Ensuring that skills and about sections do not block each other */
+}
+
+.skills__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.skills__row:not(:last-child) {
+    margin-right: 25px
+}
+
+@media (max-width: 410px) {
+    .skills__row:not(:last-child) {
+        margin-right:15px
+    }
+}
+
+@media (max-width: 300px) {
+    .skills__row:not(:last-child) {
+        margin-right:10px
+    }
+}
+
+.skills__item {
+    opacity: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    width: 1600px;
+    border: double 3px transparent;
+    border-image-slice: 1;
+    border-width: 3px;
+    background-image: linear-gradient(#1a1a1a, #1a1a1a),radial-gradient(circle at top left, #51a2e9, #ff4d5a);
+    border-radius: 20px;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    transition: transform 0.2s, opacity 1.2s;
+    overflow: hidden
+}
+
+@media (max-width: 1500px) {
+    .skills__item {
+        height:90px;
+        width: 145px
+    }
+}
+
+@media (max-width: 1300px) {
+    .skills__item {
+        opacity:1;
+        border-width: 2px
+    }
+}
+
+@media (max-width: 1000px) {
+    .skills__item {
+        height:80px;
+        width: 130px
+    }
+}
+
+@media (max-width: 600px) {
+    .skills__item {
+        height:70px;
+        width: 115px
+    }
+}
+
+@media (max-width: 500px) {
+    .skills__item {
+        height:60px;
+        width: 100px
+    }
+}
+
+@media (max-width: 410px) {
+    .skills__item {
+        height:50px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 340px) {
+    .skills__item {
+        height:45px;
+        width: 70px
+    }
+}
+
+.skills__item:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 410px) {
+    .skills__item:not(:last-child) {
+        margin-bottom:15px;
+    }
+}
+
+.skills__item img {
+    height: 60px;
+    width: auto;
+    transition: all 0.2s
+}
+
+@media (max-width: 1500px) {
+    .skills__item img {
+        height:55px
+    }
+}
+
+@media (max-width: 1000px) {
+    .skills__item img {
+        height:50px
+    }
+}
+
+@media (max-width: 600px) {
+    .skills__item img {
+        height:45px
+    }
+}
+
+@media (max-width: 500px) {
+    .skills__item img {
+        height:35px
+    }
+}
+
+@media (max-width: 410px) {
+    .skills__item img {
+        height:26px
+    }
+}
+
+.skills__item-name {
+    font-size: 1.0rem;
+    font-weight: 600;
+    line-height: 1;
+    transition: all 0.2s;
+    letter-spacing: 1px
+}
+
+@media (max-width: 1200px) {
+    .skills__item-name {
+        font-size:1.4rem
+    }
+}
+
+.skills__item-fade-in {
+    opacity: 1
+}
+
+.skills__item--js img {
+    border-radius: 5px
+}
+
+.skills__item--webpack img {
+    border-radius: 50%
+}
+
+/* Style for the button */
+button {
+    background-color: black; /* Grey color */
+    border: 2px solid #bbb; /* Slightly lighter grey border */
+    color: white; /* Dark grey text color for contrast */
+    font-size: 16px; /* Adequate font size for visibility */
+    padding: 10px 20px; /* Top & Bottom, Left & Right padding */
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+    text-transform: uppercase; /* Optional: makes all letters uppercase */
+    letter-spacing: 1px; /* Optional: increases spacing between letters */
+}
+
+/* Hover effect for the button */
+
+
+.skills__item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicates that the item is interactive */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .skills__item:hover {
+    transform: translateY(-5px); /* Moves the item up slightly on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for a "lifted" effect */
+  }
+  
+  .skills__item:hover {
+  transform: translateY(-5px) rotateZ(-3deg); /* Tilts the item slightly on hover */
+}
+
+.skills__item:hover img {
+  transform: scale(1.1) rotateZ(3deg); /* Counter-rotates the image for an engaging effect */
+}
+
+  
+  .skills__item:hover img {
+    transform: scale(1.05); /* Slightly enlarges the image on hover */
+  }
+  h2 button:hover {
+    background-color: #4b4b4b88; /* Lighter grey on hover */
+    border-color: #aaa; /* Lighter border color on hover */
+    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow around the button */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Indicates that the item is interactive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow for hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+  }
+  /*about section*/
+  .about-section {
+    font-family:  sans-serif;
+    z-index: 2; /* Higher z-index than the background */
+    background-color: #0a192f;
+    color: #8892b0;
+    padding: 100px 50px; /* Increased vertical padding and added horizontal padding */
+    margin: 95px auto 0; /* Top margin for spacing, auto for horizontal centering */
+    max-width: cover; /* Restricting maximum width for better focus */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items centrally for a tighter look */
+}
+
+.numbered-heading {
+    font-size: 32px; /* Larger font size for heading */
+    color: #ccd6f6; /* Using custom properties for theme consistency */
+    margin-bottom: 10px; /* Space below the heading */
+    text-align: left;
+}
+
+.about-inner {
+    display: flex;
+    flex-direction: column; /* Stack the text and image vertically on mobile */
+    align-items: center; /* Center align the contents */
+    justify-content: space-between;
+    width: 80%; /* Ensure full width to utilize padding effectively */
+}
+.about-text, .about-pic {
+    width: 100%; /* Full width to the container */
+}
+.about-text {
+    flex: 1;
+    padding-right: 20px;
+    max-width: 600px; /* Limiting text width for better readability */
+}
+
+.about-pic {
+    flex-basis: 250px; /* Smaller width for the picture to bring it closer to text */
+    padding: 10px; /* Padding around picture for spacing */
+}
+
+.about-pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Styled border for aesthetics */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Soft shadow for depth */
+}
+
+.skills-list {
+    list-style-type: none; /* No bullets */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between skills */
+}
+
+.skills-list li {
+    background: var(--navy); /* Themed background for each skill */
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    color: var(--lightest-slate);
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    .about-inner {
+        flex-direction: row; /* Horizontal layout on larger screens */
+    }
+    .about-text {
+        padding-right: 20px; /* Only apply padding between text and image */
+    }
+    .about-pic {
+        padding-left: 20px; /* Space between text and image */
+    }
+}
+.about-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.about-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.about-section.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }

@@ -18,7 +18,7 @@ const FrontPage = () => {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   };
   const scrollToProjects = () => {
-    document.getElementById(Projects).scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
   };
 
 
@@ -50,9 +50,9 @@ const FrontPage = () => {
       
       <nav>
       <ul id="primary-navigation" className="primary-navigation flex">
-            <li className="active"><a href="personal.html"><span aria-hidden="true">01</span>About</a></li>
-            <li className="experience" onClick={scrollToProjects} ><a href="experience.html"><span aria-hidden="true">02</span>Experience</a></li>
-            <li className="contact"><a href="Work.html"><span aria-hidden="true">03</span>Contact</a></li>
+            <li className="active"><a onClick={scrollToAbout} ><span aria-hidden="true">01</span>About</a></li>
+            <li className="experience"  ><a onClick={scrollToProjects}><span aria-hidden="true">02</span>Experience</a></li>
+            <li className="contact"><a ><span aria-hidden="true">03</span>Contact</a></li>
             <li><a href="/resume.pdf" className="resume-link"><span>Resume</span></a></li>
       </ul>
       </nav> 
@@ -116,22 +116,27 @@ const FrontPage = () => {
         <h1 className="about-title">Know <strong className="purple">Who I'M</strong></h1>
         <div className="custom-quote">
           <p style={{ textAlign: "justify" }}>
-            Hailing from <span className="purple">Melbourne, VIC</span>, I am Harmandeep Singh, a dedicated student pursuing a Bachelor of Software Engineering at <strong>RMIT</strong>. My passion for technology is driven by the potential to transform innovative visions into tangible solutions that have real-world applications.
+            From <span className="purple">Melbourne, VIC</span>, I am Harmandeep Singh, a motivated student
+             pursuing the Bachelor of Software Engineering at <strong>RMIT</strong>. My passion for technology is driven
+             by its ability to transform my vision into
+             actual real-world applications for people.
           </p>
           <p style={{ textAlign: "justify" }}>
-            My journey into the tech world is fueled by a desire to create and innovate, continuously seeking opportunities to apply my skills in practical settings.
+          In every project I undertake, my goal is to design solutions that are not only technologically
+           advanced but also closely aligned with the needs of the community.
           </p>
           <p style={{ textAlign: "justify" }}>
-            Beyond the world of code, I engage in activities that foster my creativity and keep me energized:
+            Beyond the world of code, I like to engage in activties that actively challenge me:
           </p>
           <ul>
-            <li className="about-activity">Mastering melodies on the piano.</li>
-            <li className="about-activity">Keeping fit with regular workouts.</li>
-            <li className="about-activity">Scoring goals on the soccer field.</li>
+            <li className="about-activity">Playing the Piano</li>
+            <li className="about-activity">Working Out</li>
+            <li className="about-activity">Playing Soccer with Friends</li>
           </ul>
-          <p style={{ color: "rgb(155, 126, 172)" }}>
+          {/*<p style={{ color: "rgb(155, 126, 172)" }}>
+            
             "I strive to build solutions that make a significant impact."
-          </p>
+          </p> - Quotes*/}
           <footer className="custom-quote-footer">Harmandeep Singh</footer>
         </div>
       </div>
@@ -141,6 +146,7 @@ const FrontPage = () => {
     </div>
   </div>
 </section>
+<section id='projects'></section>
 <Projects></Projects>
 <Github />
 <Footer/>

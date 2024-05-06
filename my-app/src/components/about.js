@@ -13,6 +13,7 @@ import laptopImg from "./imgs/about.png"; // Make sure the path is correct
 import Projects from "./Projects/Projects"
 import Github from './Github';
 import Footer from './Footer';
+import Resume from './assets/Resume.pdf'
 const FrontPage = () => {
   const scrollToAbout = () => {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
@@ -45,7 +46,7 @@ const FrontPage = () => {
    
     <div className="background">
       <header className="primary-header flex">
-        {/* Header content if any */}
+        {/* Headerdddd content if any */}
       </header>
       
       <nav>
@@ -53,7 +54,7 @@ const FrontPage = () => {
             <li className="active"><a onClick={scrollToAbout} ><span aria-hidden="true">01</span>About</a></li>
             <li className="experience"  ><a onClick={scrollToProjects}><span aria-hidden="true">02</span>Experience</a></li>
             <li className="contact"><a ><span aria-hidden="true">03</span>Contact</a></li>
-            <li><a href="/resume.pdf" className="resume-link"><span>Resume</span></a></li>
+            <li><a href={Resume} className="resume-link"><span>Resume</span></a></li>
       </ul>
       </nav> 
       

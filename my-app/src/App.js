@@ -4,7 +4,6 @@ import Particle1 from "./components/particles";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Projects from "./components/Projects/Projects"
 function App() {
-  
   return (
     
     <Router>

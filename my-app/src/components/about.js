@@ -46,7 +46,7 @@ const FrontPage = () => {
    
     <div className="background">
       <header className="primary-header flex">
-        {/* Headerdddd content if any */}
+        {/* Header content if any */}
       </header>
       
       <nav>

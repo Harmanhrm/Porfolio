@@ -5,7 +5,7 @@ h1 { margin-top: 0; }
 .background {
     z-index: 2;
     height:700px; /*900 px for most other images*/
-    
+    background-color: black;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
